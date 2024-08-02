@@ -1,5 +1,5 @@
 def calcular_imc(peso: float, altura: float) -> float:
-    return peso / altura * altura
+    return peso / (altura * altura)
 
 def classificacao_imc(imc: float) -> str:
     if imc < 18.5:
