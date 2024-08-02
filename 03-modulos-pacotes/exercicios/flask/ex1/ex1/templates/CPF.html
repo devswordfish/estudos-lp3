@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Gerador de CPF{% endblock %}
+
+{% block main %}
+    <a href="/">Voltar</a>
+
+    <div class="cpf-list-container">
+        <ul class="cpf-list">
+            {% for cpf in cpf_list %}
+            <li>
+                {{ cpf }}
+            </li>    
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

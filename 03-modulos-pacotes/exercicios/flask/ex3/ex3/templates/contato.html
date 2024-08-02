@@ -1,0 +1,24 @@
+{% extends 'layout-main.html' %}
+
+{% block title %}Contato{% endblock %}
+
+{% block main %}
+    <h1 class="main-title">Contato</h1>
+
+    <form class="contact-form disabled-form">
+        <div class="input-container">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" name="email" id="email" autocomplete="off" placeholder=" ">
+        </div>
+        
+        <div class="input-container">
+            <label class="form-label" for="message">Mensagem</label>
+            <textarea class="form-input" name="message" id="message" placeholder=" "></textarea>
+        </div>
+
+        <button type="submit" class="form-submit-btn" disabled>
+            Enviar
+        </button>
+    </form>
+{% endblock %}
+

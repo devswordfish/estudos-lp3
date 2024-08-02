@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='paper.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1 class="paper-title">{% block paper_title %}{% endblock %}</h1>
+
+    <main>    
+        {% block paper_body %}{% endblock %}
+    </main>
+{% endblock %}

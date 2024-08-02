@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+{% endblock %}
+
+{% block body %}
+    <header class="main-header">
+        <nav class="navigation">
+            <ul class="links">
+                <li><a href="./">Home</a></li>
+                <li><a href="./contato">Contato</a></li>
+                <li><a href="./produtos">Produtos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+
+    <footer class="main-footer">
+        <p class="developed-by">Desenvolvido por Leandro Kenzo Takara, 2024</p>
+
+        <nav class="footer-navigation">
+            <ul class="footer-links">
+                <li><a href="./termos-de-uso" target="_blank">Termos de uso</a></li>
+                <li><a href="./politica-de-privacidade" target="_blank">Política de privacidade</a></li>
+                <li><a href="./como-utilizar" target="_blank">Como utilizar</a></li>
+            </ul>
+        </nav>
+    </footer>
+{% endblock %}

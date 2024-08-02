@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}Gerador de CPF{% endblock %}
+
+{% block main %}
+    <form action="/" method="POST" class="form">
+        <div class="input-container">
+            <label class="form-label" for="input-cpf">Quantidade de CPF</label>
+            <input class="form-input" type="number" name="input-cpf" id="input-cpf" min="1" step="1" placeholder="" required>
+        </div>
+
+        <button type="submit" class="form-btn-submit">
+            Enviar
+        </button>
+    </form>
+{% endblock %}

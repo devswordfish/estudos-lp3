@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background-image: linear-gradient(rgb(122 109 145), rgb(87, 69, 120));
+}
+
+.main-header {
+    padding-block: 20px;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 7px 7px 6px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    max-width: 500px;
+    width: 100%;
+    padding: 10px;
+}
+
+.content {
+    padding: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(115 141 171), rgb(54 93 137));
+    box-shadow: 7px 7px 12px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+    padding-top: 30px;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    max-width: 300px;
+    margin-inline: auto;
+}
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    translate: 0 -50%;
+    padding: 5px 10px;
+    color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+    font-size: 1rem;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    transition: 0.2s;
+}
+
+:is(.input-container:has(.form-input:focus), .input-container:has(.form-input:not(:placeholder-shown))) {
+    & .form-label {
+        top: 0;
+        left: 0;
+        border-bottom: solid rgb(178, 178, 178) 1px;
+        translate: 0 -100%;
+        font-size: 0.8rem;
+    }
+
+    & .form-input {
+        border-top-left-radius: 0;
+    }
+}
+
+.form-btn-submit {
+    display: block;
+    margin: 50px auto 0;
+    padding: 10px 20px;
+    background-image: linear-gradient(rgb(67 212 67), rgb(44, 199, 44));
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.form-btn-submit:hover {
+    filter: brightness(110%);
+}
+
+.cpf-list-container {
+    padding: 20px;
+    scrollbar-color: white rgba(255, 255, 255, 0.1);
+}
+
+.cpf-list {
+    padding: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.cpf-list li {
+    line-height: 1.5rem;
+}

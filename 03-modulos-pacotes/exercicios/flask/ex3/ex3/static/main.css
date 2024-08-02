@@ -1,0 +1,137 @@
+:root {
+    --link-color: rgb(45, 121, 209);
+}
+
+.main-header {
+    margin-block: 40px;
+}
+
+.links {
+    display: flex;
+    column-gap: 20px;
+    margin-inline: auto;
+    width: fit-content;
+    color: var(--link-color);
+    font-size: 1.2rem;
+}
+
+.main-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+main {
+    max-width: 800px;
+    padding-inline: 20px;
+    margin-inline: auto;
+    font-size: 1.2rem;
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    background-color: rgb(103, 209, 245);
+    border: solid black 2px;
+    margin-bottom: 20px;
+    margin-inline: auto;
+}
+
+.product {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    position: relative;
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+.contact-form.disabled-form::before {
+    position: absolute;
+    content: 'Formulário desabilitado';
+    top: 0;
+    right: 0;
+    height: 30px;
+    transform: translateY(-40px);
+    background-color: red;
+    padding-inline: 5px;
+    color: white;
+    line-height: 30px;
+    user-select: none;
+    font-size: 0.9rem;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-inline: auto;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: white;
+    padding-inline: 5px;
+    cursor: pointer;
+    z-index: 1;
+    transition: top 0.2s;
+}
+
+.form-input {
+    position: relative;
+    left: 50%;
+    translate: -50%;
+    width: 100%;
+    height: 40px;
+    padding: 10px 8px;
+    border: solid black 1px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.input-container:has(.form-input:focus) .form-label,
+.input-container:has(.form-input:not(:placeholder-shown)) .form-label {
+    top: 0;
+}
+
+#message {
+    resize: none;
+    height: 100px;
+}
+
+.form-submit-btn {
+    width: 30%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* @keyframes {
+    
+} */
+
+.main-footer {
+    border-top: solid black 1px;
+    max-width: 1000px;
+    padding-inline: 20px;
+    margin: 50px auto 30px;
+    font-size: 1.2rem;
+}
+
+.developed-by {
+    margin-block: 10px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    column-gap: 20px;
+    margin-inline: auto;
+    width: fit-content;
+    color: var(--link-color);
+}

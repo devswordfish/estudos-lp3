@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Gerador de CNPJ{% endblock %}
+
+{% block main %}
+    <a href="/">Voltar</a>
+
+    <div class="cnpj-list-container">
+        <ul class="cnpj-list">
+            {% for cnpj in cnpj_list %}
+            <li>
+                {{ cnpj }}
+            </li>    
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
